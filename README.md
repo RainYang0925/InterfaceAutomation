@@ -2,9 +2,9 @@
 本接口自动化框架通过读取excel文件中维护的接口case，来调用接口，并通过接口返回的数据生成测试报告
 
 ### 需要安装的python扩展包
-* requests  --用于请求接口
-* jinja2    --渲染测试报告
-* xlrd      --读取excel
+* requests 2.10.0  --用于请求接口
+* jinja2 2.8   --渲染测试报告
+* xlrd 1.0.0     --读取excel
 
 ### 文件和目录说明
 ![文件目录](https://github.com/yinzhixin/InterfaceAutomation/blob/master/images/dir.png)
