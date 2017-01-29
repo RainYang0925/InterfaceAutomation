@@ -1,0 +1,7 @@
+*.doc
+*.pyc
+settings.*
+*.log
+*.project
+*.pydevproject
+org.*

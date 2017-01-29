@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TestReport</title>
+    <meta charset="UTF-8"></meta>
+    <link href="D:\mycode\work_code\virtual_pyenv\code\static/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="D:\mycode\work_code\virtual_pyenv\code\static/mypage.css" type="text/css" rel="stylesheet" />
+    <link href="D:\mycode\work_code\virtual_pyenv\code\static/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+    <link href="D:\mycode\work_code\virtual_pyenv\code\static/dataTables.bootstrap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div name="container">
+        <div id="summarynum" style="display:none"></div>
+        <div class="row" id="summary" style="margin:15px;">
+            <div class="col-lg-7">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">测试概要</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <table class="table table-bordered table-condensed table-hover">
+                            <tbody>
+                            <tr>
+                                <td>开始时间</td>
+                                <td>2016-12-13 11:57:19</td>
+                            </tr>
+                            <tr>
+                                <td>结束时间</td>
+                                <td>2016-12-13 11:57:25</td>
+                            </tr>
+                            <tr>
+                                <td>case总数</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>成功数</td>
+                                <td id="success">9</td>
+                            </tr>
+                            <tr>
+                                <td>失败数</td>
+                                <td id="fail">3</td>
+                            </tr>
+                            <tr>
+                                <td>错误数</td>
+                                <td id="error">3</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-lg-5">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">概要图</h3>
+                    </div>
+                    <div id="summarypic" style="height:236px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="detail" style="margin:15px;">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">测试详情 (tips:单击任意单元格可在最下方显示完整内容)</h3>
+                </div>
+                <table id="detailtable" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>接口名称</th>
+                            <th>接口地址</th>
+                            <th>接口类型</th>
+                            <th>接口入参</th>
+                            <th>预期出参</th>
+                            <th>实际出参</th>
+                            <th>测试结果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td title=概览页面>概览页面</td>
+                            <td title=http://182.61.58.92/rudder/rest/summary/index_kpi_snapshot>http://182.61.58.92/rudder/rest/summary/index_kpi_snapshot</td>
+                            <td title=post>post</td>
+                            <td title={'daykey': 20161114}>{'daykey': 20161114}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{result_data:{9540dabiao_days:[{accessible:f...success state taken a substring of output>{data:{result_data:{9540dabiao_days:[{accessible:f...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=地图和城市排名模块>地图和城市排名模块</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_map_and_rank>http://182.61.58.92/rudder/rest/topic/topic_map_and_rank</td>
+                            <td title=post>post</td>
+                            <td title={'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}>{'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{result_data:{city_datas:{},province_datas:{...success state taken a substring of output>{data:{result_data:{city_datas:{},province_datas:{...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=运营效率雷达图模块>运营效率雷达图模块</td>
+                            <td title=http://182.61.58.92/rudder/rest/summary/index_radar_snapshot>http://182.61.58.92/rudder/rest/summary/index_radar_snapshot</td>
+                            <td title=get>get</td>
+                            <td title={'cityId': 110, 'daykey': 20161114}>{'cityId': 110, 'daykey': 20161114}</td>
+                            <td title="status": 1|查询结果为空>"status": 1|查询结果为空</td>
+                            <td title=405>405</td>
+                            <td title=Error>Error</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=城市分天明细曲线图>城市分天明细曲线图</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_city_measure_lines>http://182.61.58.92/rudder/rest/topic/topic_city_measure_lines</td>
+                            <td title=post>post</td>
+                            <td title={'cityId': 131, 'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}>{'cityId': 131, 'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}</td>
+                            <td title="status": 12>"status": 12</td>
+                            <td title={data:{result_data:{city_datas:{}},result_enrich:{dimension_name_list:[deliveryId,deliveryName,shopId,shopName,cityId,cityName,aoiId,aoiName],dimension_name_map:{aoiId:商圈ID,aoiName:所属商圈,cityId:城市ID,cityName:所属城市,deliveryId:骑士ID,deliveryName:骑士姓名,shopId:商户ID,shopName:商户名称},kpi_measures:[shop_dongxiao_lv,xin_yonghu_num,xinzeng_shenhe_pass_shanghu_num,liushui_youhuiqian,roi_kaohe,baidu_shichang_fene_zhanbi,roi_kaohe_reciprocal,shop_butie_lv,wuliu_order_wancheng_num,zipeisong_shanghu_butielv,9540dabiao_days,xinzeng_shenhe_pass_shuangzheng_shanghu_num],measures_en2ch:{baidu_shichang_fene:百度月流水,baidu_shichang_fene_zhanbi:市场份额,baidu_shop_cover_lv:商户覆盖率,bailing_shichang_zhanyoulv:白领市场占有率,bd_butie_and_daijinquan:百度补贴(含代金券),caipin_huodong_shop_num:菜品活动商户数,caipin_huodong_shop_num_zhanbi:菜品活动商户数占比,chudan_qishi_num:出单骑士数,danjun_yingli:单均盈利,day_roi:ROI(渠道),day_roi_zongti:ROI(流水/百度补贴),day_roi_zongti_jing:ROI(流水/(补贴-折扣收入)),dianping_shop_num:大众点评商户数,dingdan_zhunshilv:物流单准时率,ele_shichang_fene:饿了么月流水,ele_shichang_fene_zhanbi:饿了么市占率,jishidan_pingjun_songda_shijian:物流单平均配送时长,jundanjia_youhuiqian:均单价(优惠前),liushui_youhuiqian:流水,liushui_youhuiqian_normal_all:全部订单流水(优惠前),lizhi_qishi_num:离职骑士数,manjian_huodong_shop_num:满减活动商户数,manjian_huodong_shop_num_zhanbi:满减活动商户数占比,meituan_shichang_fene:美团月流水,meituan_shichang_fene_zhanbi:美团市占率,order_num:订单数,order_shouru_liushui:订单收入,order_wancheng_lv:订单完成率,order_wancheng_num:完成订单数,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_daijinquan:商户补贴（含商户券）,shop_butie_lv:商户承担费率（考核用）,shop_butie_lv_daijinquan:商户补贴率（含商户券）,shop_chudan_shop_num:出单商户数,shop_cover_lv_zhizi:商户覆盖率,shop_dongxiao_lv:动销率,shop_xinzeng_shanghu_num:新增商户数,shop_zaixian_hezuo_num:在线合作商户数,shop_zhekou_shop_num:折扣商户数,user_health_level:用户健康度,wuliu_avg_songda_time:平均送达时间,wuliu_liushui_youhuiqian:物流单流水(优惠前),wuliu_order_wancheng_num:物流完成单量,wuliu_order_wanchenglv:物流单完成率,wuliu_peisong_order_num:物流单数,wuliu_qishi_renxiao:骑士人效,wuliu_shouru:物流收入,wuliu_xianshang_putie:物流单百度补贴,wuliu_zhunshi_lv:百度配送物流准时率,xiadan_user_num:下单用户数,xin_yonghu_num:新用户,xin_yonghu_zhanbi:新用户占比,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zaizhi_qishi_num:在职骑士数,zipeisong_shanghu_butielv:自配送商户补贴率,zong_shichang_fene_zhanbi:总市占率},measures_en2ch_kpi_measures:{baidu_shichang_fene_zhanbi:市场份额,liushui_youhuiqian:流水,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_lv:商户承担费率（考核用）,wuliu_order_wancheng_num:物流完成单量,xin_yonghu_num:新用户,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zipeisong_shanghu_butielv:自配送商户补贴率},summary_radar_measures:[user_health_level,xin_yonghu_zhanbi,wuliu_zhunshi_lv,wuliu_avg_songda_time,wuliu_qishi_renxiao,shop_cover_lv_zhizi,danjun_yingli,zong_shichang_fene_zhanbi],summary_radar_measures_explaination:{danjun_yingli:（订单收入-百度补贴（含代金券））/完成订单数,shop_cover_lv_zhizi:百度商户数覆盖的POI点/总POI点（同智子口径）,user_health_level:用户生命周期中新用户、上升期、平稳期为健康用户群，流失用户、衰退期用户为非健康用户群,wuliu_avg_songda_time:订单已完成的时间节点-用户下单时间节点,wuliu_qishi_renxiao:完成订单数/出单骑士数量,wuliu_zhunshi_lv:（总完成订单数-早达订单数-晚达订单数）/总完成订单数,xin_yonghu_zhanbi:下单新用户数/下单用户数,zong_shichang_fene_zhanbi:百度外卖流水/三家总流水},topics_default_measures:{compete:[zong_shichang_fene_zhanbi],delivery:[wuliu_qishi_renxiao,wuliu_zhunshi_lv,wuliu_avg_songda_time],order:[liushui_youhuiqian,roi_kaohe,danjun_yingli],shop:[xinzeng_shenhe_pass_shanghu_num,shop_cover_lv_zhizi],user:[xin_yonghu_num,xin_yonghu_zhanbi,user_health_level]},topics_detail_drill_measure_names:{delivery:chudan_qishi_num,order:shop_zaixian_hezuo_num,user:shop_zaixian_hezuo_num}}},info:0d80dda04f9c38cc1d4ce587e38b185b,params:{beginTime:20161114,cityId:131,endTime:20161114,timeType:day,topicName:order},status:1}>{data:{result_data:{city_datas:{}},result_enrich:{dimension_name_list:[deliveryId,deliveryName,shopId,shopName,cityId,cityName,aoiId,aoiName],dimension_name_map:{aoiId:商圈ID,aoiName:所属商圈,cityId:城市ID,cityName:所属城市,deliveryId:骑士ID,deliveryName:骑士姓名,shopId:商户ID,shopName:商户名称},kpi_measures:[shop_dongxiao_lv,xin_yonghu_num,xinzeng_shenhe_pass_shanghu_num,liushui_youhuiqian,roi_kaohe,baidu_shichang_fene_zhanbi,roi_kaohe_reciprocal,shop_butie_lv,wuliu_order_wancheng_num,zipeisong_shanghu_butielv,9540dabiao_days,xinzeng_shenhe_pass_shuangzheng_shanghu_num],measures_en2ch:{baidu_shichang_fene:百度月流水,baidu_shichang_fene_zhanbi:市场份额,baidu_shop_cover_lv:商户覆盖率,bailing_shichang_zhanyoulv:白领市场占有率,bd_butie_and_daijinquan:百度补贴(含代金券),caipin_huodong_shop_num:菜品活动商户数,caipin_huodong_shop_num_zhanbi:菜品活动商户数占比,chudan_qishi_num:出单骑士数,danjun_yingli:单均盈利,day_roi:ROI(渠道),day_roi_zongti:ROI(流水/百度补贴),day_roi_zongti_jing:ROI(流水/(补贴-折扣收入)),dianping_shop_num:大众点评商户数,dingdan_zhunshilv:物流单准时率,ele_shichang_fene:饿了么月流水,ele_shichang_fene_zhanbi:饿了么市占率,jishidan_pingjun_songda_shijian:物流单平均配送时长,jundanjia_youhuiqian:均单价(优惠前),liushui_youhuiqian:流水,liushui_youhuiqian_normal_all:全部订单流水(优惠前),lizhi_qishi_num:离职骑士数,manjian_huodong_shop_num:满减活动商户数,manjian_huodong_shop_num_zhanbi:满减活动商户数占比,meituan_shichang_fene:美团月流水,meituan_shichang_fene_zhanbi:美团市占率,order_num:订单数,order_shouru_liushui:订单收入,order_wancheng_lv:订单完成率,order_wancheng_num:完成订单数,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_daijinquan:商户补贴（含商户券）,shop_butie_lv:商户承担费率（考核用）,shop_butie_lv_daijinquan:商户补贴率（含商户券）,shop_chudan_shop_num:出单商户数,shop_cover_lv_zhizi:商户覆盖率,shop_dongxiao_lv:动销率,shop_xinzeng_shanghu_num:新增商户数,shop_zaixian_hezuo_num:在线合作商户数,shop_zhekou_shop_num:折扣商户数,user_health_level:用户健康度,wuliu_avg_songda_time:平均送达时间,wuliu_liushui_youhuiqian:物流单流水(优惠前),wuliu_order_wancheng_num:物流完成单量,wuliu_order_wanchenglv:物流单完成率,wuliu_peisong_order_num:物流单数,wuliu_qishi_renxiao:骑士人效,wuliu_shouru:物流收入,wuliu_xianshang_putie:物流单百度补贴,wuliu_zhunshi_lv:百度配送物流准时率,xiadan_user_num:下单用户数,xin_yonghu_num:新用户,xin_yonghu_zhanbi:新用户占比,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zaizhi_qishi_num:在职骑士数,zipeisong_shanghu_butielv:自配送商户补贴率,zong_shichang_fene_zhanbi:总市占率},measures_en2ch_kpi_measures:{baidu_shichang_fene_zhanbi:市场份额,liushui_youhuiqian:流水,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_lv:商户承担费率（考核用）,wuliu_order_wancheng_num:物流完成单量,xin_yonghu_num:新用户,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zipeisong_shanghu_butielv:自配送商户补贴率},summary_radar_measures:[user_health_level,xin_yonghu_zhanbi,wuliu_zhunshi_lv,wuliu_avg_songda_time,wuliu_qishi_renxiao,shop_cover_lv_zhizi,danjun_yingli,zong_shichang_fene_zhanbi],summary_radar_measures_explaination:{danjun_yingli:（订单收入-百度补贴（含代金券））/完成订单数,shop_cover_lv_zhizi:百度商户数覆盖的POI点/总POI点（同智子口径）,user_health_level:用户生命周期中新用户、上升期、平稳期为健康用户群，流失用户、衰退期用户为非健康用户群,wuliu_avg_songda_time:订单已完成的时间节点-用户下单时间节点,wuliu_qishi_renxiao:完成订单数/出单骑士数量,wuliu_zhunshi_lv:（总完成订单数-早达订单数-晚达订单数）/总完成订单数,xin_yonghu_zhanbi:下单新用户数/下单用户数,zong_shichang_fene_zhanbi:百度外卖流水/三家总流水},topics_default_measures:{compete:[zong_shichang_fene_zhanbi],delivery:[wuliu_qishi_renxiao,wuliu_zhunshi_lv,wuliu_avg_songda_time],order:[liushui_youhuiqian,roi_kaohe,danjun_yingli],shop:[xinzeng_shenhe_pass_shanghu_num,shop_cover_lv_zhizi],user:[xin_yonghu_num,xin_yonghu_zhanbi,user_health_level]},topics_detail_drill_measure_names:{delivery:chudan_qishi_num,order:shop_zaixian_hezuo_num,user:shop_zaixian_hezuo_num}}},info:0d80dda04f9c38cc1d4ce587e38b185b,params:{beginTime:20161114,cityId:131,endTime:20161114,timeType:day,topicName:order},status:1}</td>
+                            <td title=Fail>Fail</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=数据策略分析展示图表>数据策略分析展示图表</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_deep_chart>http://182.61.58.92/rudder/rest/topic/topic_deep_chart</td>
+                            <td title=post>post</td>
+                            <td title={'cityId': 131, 'endTime': '20161107', 'beginTime': '20161107', 'timeType': 'week', 'topicName': 'order'}>{'cityId': 131, 'endTime': '20161107', 'beginTime': '20161107', 'timeType': 'week', 'topicName': 'order'}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{proccessed_param:{accessCityIds:[-900000],b...success state taken a substring of output>{data:{proccessed_param:{accessCityIds:[-900000],b...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=概览页面>概览页面</td>
+                            <td title=http://182.61.58.92/rudder/rest/summary/index_kpi_snapshot>http://182.61.58.92/rudder/rest/summary/index_kpi_snapshot</td>
+                            <td title=post>post</td>
+                            <td title={'daykey': 20161114}>{'daykey': 20161114}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{result_data:{9540dabiao_days:[{accessible:f...success state taken a substring of output>{data:{result_data:{9540dabiao_days:[{accessible:f...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=地图和城市排名模块>地图和城市排名模块</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_map_and_rank>http://182.61.58.92/rudder/rest/topic/topic_map_and_rank</td>
+                            <td title=post>post</td>
+                            <td title={'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}>{'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{result_data:{city_datas:{},province_datas:{...success state taken a substring of output>{data:{result_data:{city_datas:{},province_datas:{...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=运营效率雷达图模块>运营效率雷达图模块</td>
+                            <td title=http://182.61.58.92/rudder/rest/summary/index_radar_snapshot>http://182.61.58.92/rudder/rest/summary/index_radar_snapshot</td>
+                            <td title=get>get</td>
+                            <td title={'cityId': 110, 'daykey': 20161114}>{'cityId': 110, 'daykey': 20161114}</td>
+                            <td title="status": 1|查询结果为空>"status": 1|查询结果为空</td>
+                            <td title=405>405</td>
+                            <td title=Error>Error</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=城市分天明细曲线图>城市分天明细曲线图</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_city_measure_lines>http://182.61.58.92/rudder/rest/topic/topic_city_measure_lines</td>
+                            <td title=post>post</td>
+                            <td title={'cityId': 131, 'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}>{'cityId': 131, 'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}</td>
+                            <td title="status": 12>"status": 12</td>
+                            <td title={data:{result_data:{city_datas:{}},result_enrich:{dimension_name_list:[deliveryId,deliveryName,shopId,shopName,cityId,cityName,aoiId,aoiName],dimension_name_map:{aoiId:商圈ID,aoiName:所属商圈,cityId:城市ID,cityName:所属城市,deliveryId:骑士ID,deliveryName:骑士姓名,shopId:商户ID,shopName:商户名称},kpi_measures:[shop_dongxiao_lv,xin_yonghu_num,xinzeng_shenhe_pass_shanghu_num,liushui_youhuiqian,roi_kaohe,baidu_shichang_fene_zhanbi,roi_kaohe_reciprocal,shop_butie_lv,wuliu_order_wancheng_num,zipeisong_shanghu_butielv,9540dabiao_days,xinzeng_shenhe_pass_shuangzheng_shanghu_num],measures_en2ch:{baidu_shichang_fene:百度月流水,baidu_shichang_fene_zhanbi:市场份额,baidu_shop_cover_lv:商户覆盖率,bailing_shichang_zhanyoulv:白领市场占有率,bd_butie_and_daijinquan:百度补贴(含代金券),caipin_huodong_shop_num:菜品活动商户数,caipin_huodong_shop_num_zhanbi:菜品活动商户数占比,chudan_qishi_num:出单骑士数,danjun_yingli:单均盈利,day_roi:ROI(渠道),day_roi_zongti:ROI(流水/百度补贴),day_roi_zongti_jing:ROI(流水/(补贴-折扣收入)),dianping_shop_num:大众点评商户数,dingdan_zhunshilv:物流单准时率,ele_shichang_fene:饿了么月流水,ele_shichang_fene_zhanbi:饿了么市占率,jishidan_pingjun_songda_shijian:物流单平均配送时长,jundanjia_youhuiqian:均单价(优惠前),liushui_youhuiqian:流水,liushui_youhuiqian_normal_all:全部订单流水(优惠前),lizhi_qishi_num:离职骑士数,manjian_huodong_shop_num:满减活动商户数,manjian_huodong_shop_num_zhanbi:满减活动商户数占比,meituan_shichang_fene:美团月流水,meituan_shichang_fene_zhanbi:美团市占率,order_num:订单数,order_shouru_liushui:订单收入,order_wancheng_lv:订单完成率,order_wancheng_num:完成订单数,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_daijinquan:商户补贴（含商户券）,shop_butie_lv:商户承担费率（考核用）,shop_butie_lv_daijinquan:商户补贴率（含商户券）,shop_chudan_shop_num:出单商户数,shop_cover_lv_zhizi:商户覆盖率,shop_dongxiao_lv:动销率,shop_xinzeng_shanghu_num:新增商户数,shop_zaixian_hezuo_num:在线合作商户数,shop_zhekou_shop_num:折扣商户数,user_health_level:用户健康度,wuliu_avg_songda_time:平均送达时间,wuliu_liushui_youhuiqian:物流单流水(优惠前),wuliu_order_wancheng_num:物流完成单量,wuliu_order_wanchenglv:物流单完成率,wuliu_peisong_order_num:物流单数,wuliu_qishi_renxiao:骑士人效,wuliu_shouru:物流收入,wuliu_xianshang_putie:物流单百度补贴,wuliu_zhunshi_lv:百度配送物流准时率,xiadan_user_num:下单用户数,xin_yonghu_num:新用户,xin_yonghu_zhanbi:新用户占比,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zaizhi_qishi_num:在职骑士数,zipeisong_shanghu_butielv:自配送商户补贴率,zong_shichang_fene_zhanbi:总市占率},measures_en2ch_kpi_measures:{baidu_shichang_fene_zhanbi:市场份额,liushui_youhuiqian:流水,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_lv:商户承担费率（考核用）,wuliu_order_wancheng_num:物流完成单量,xin_yonghu_num:新用户,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zipeisong_shanghu_butielv:自配送商户补贴率},summary_radar_measures:[user_health_level,xin_yonghu_zhanbi,wuliu_zhunshi_lv,wuliu_avg_songda_time,wuliu_qishi_renxiao,shop_cover_lv_zhizi,danjun_yingli,zong_shichang_fene_zhanbi],summary_radar_measures_explaination:{danjun_yingli:（订单收入-百度补贴（含代金券））/完成订单数,shop_cover_lv_zhizi:百度商户数覆盖的POI点/总POI点（同智子口径）,user_health_level:用户生命周期中新用户、上升期、平稳期为健康用户群，流失用户、衰退期用户为非健康用户群,wuliu_avg_songda_time:订单已完成的时间节点-用户下单时间节点,wuliu_qishi_renxiao:完成订单数/出单骑士数量,wuliu_zhunshi_lv:（总完成订单数-早达订单数-晚达订单数）/总完成订单数,xin_yonghu_zhanbi:下单新用户数/下单用户数,zong_shichang_fene_zhanbi:百度外卖流水/三家总流水},topics_default_measures:{compete:[zong_shichang_fene_zhanbi],delivery:[wuliu_qishi_renxiao,wuliu_zhunshi_lv,wuliu_avg_songda_time],order:[liushui_youhuiqian,roi_kaohe,danjun_yingli],shop:[xinzeng_shenhe_pass_shanghu_num,shop_cover_lv_zhizi],user:[xin_yonghu_num,xin_yonghu_zhanbi,user_health_level]},topics_detail_drill_measure_names:{delivery:chudan_qishi_num,order:shop_zaixian_hezuo_num,user:shop_zaixian_hezuo_num}}},info:7830643d6b9b2e5f119e9fc81ccac4b1,params:{beginTime:20161114,cityId:131,endTime:20161114,timeType:day,topicName:order},status:1}>{data:{result_data:{city_datas:{}},result_enrich:{dimension_name_list:[deliveryId,deliveryName,shopId,shopName,cityId,cityName,aoiId,aoiName],dimension_name_map:{aoiId:商圈ID,aoiName:所属商圈,cityId:城市ID,cityName:所属城市,deliveryId:骑士ID,deliveryName:骑士姓名,shopId:商户ID,shopName:商户名称},kpi_measures:[shop_dongxiao_lv,xin_yonghu_num,xinzeng_shenhe_pass_shanghu_num,liushui_youhuiqian,roi_kaohe,baidu_shichang_fene_zhanbi,roi_kaohe_reciprocal,shop_butie_lv,wuliu_order_wancheng_num,zipeisong_shanghu_butielv,9540dabiao_days,xinzeng_shenhe_pass_shuangzheng_shanghu_num],measures_en2ch:{baidu_shichang_fene:百度月流水,baidu_shichang_fene_zhanbi:市场份额,baidu_shop_cover_lv:商户覆盖率,bailing_shichang_zhanyoulv:白领市场占有率,bd_butie_and_daijinquan:百度补贴(含代金券),caipin_huodong_shop_num:菜品活动商户数,caipin_huodong_shop_num_zhanbi:菜品活动商户数占比,chudan_qishi_num:出单骑士数,danjun_yingli:单均盈利,day_roi:ROI(渠道),day_roi_zongti:ROI(流水/百度补贴),day_roi_zongti_jing:ROI(流水/(补贴-折扣收入)),dianping_shop_num:大众点评商户数,dingdan_zhunshilv:物流单准时率,ele_shichang_fene:饿了么月流水,ele_shichang_fene_zhanbi:饿了么市占率,jishidan_pingjun_songda_shijian:物流单平均配送时长,jundanjia_youhuiqian:均单价(优惠前),liushui_youhuiqian:流水,liushui_youhuiqian_normal_all:全部订单流水(优惠前),lizhi_qishi_num:离职骑士数,manjian_huodong_shop_num:满减活动商户数,manjian_huodong_shop_num_zhanbi:满减活动商户数占比,meituan_shichang_fene:美团月流水,meituan_shichang_fene_zhanbi:美团市占率,order_num:订单数,order_shouru_liushui:订单收入,order_wancheng_lv:订单完成率,order_wancheng_num:完成订单数,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_daijinquan:商户补贴（含商户券）,shop_butie_lv:商户承担费率（考核用）,shop_butie_lv_daijinquan:商户补贴率（含商户券）,shop_chudan_shop_num:出单商户数,shop_cover_lv_zhizi:商户覆盖率,shop_dongxiao_lv:动销率,shop_xinzeng_shanghu_num:新增商户数,shop_zaixian_hezuo_num:在线合作商户数,shop_zhekou_shop_num:折扣商户数,user_health_level:用户健康度,wuliu_avg_songda_time:平均送达时间,wuliu_liushui_youhuiqian:物流单流水(优惠前),wuliu_order_wancheng_num:物流完成单量,wuliu_order_wanchenglv:物流单完成率,wuliu_peisong_order_num:物流单数,wuliu_qishi_renxiao:骑士人效,wuliu_shouru:物流收入,wuliu_xianshang_putie:物流单百度补贴,wuliu_zhunshi_lv:百度配送物流准时率,xiadan_user_num:下单用户数,xin_yonghu_num:新用户,xin_yonghu_zhanbi:新用户占比,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zaizhi_qishi_num:在职骑士数,zipeisong_shanghu_butielv:自配送商户补贴率,zong_shichang_fene_zhanbi:总市占率},measures_en2ch_kpi_measures:{baidu_shichang_fene_zhanbi:市场份额,liushui_youhuiqian:流水,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_lv:商户承担费率（考核用）,wuliu_order_wancheng_num:物流完成单量,xin_yonghu_num:新用户,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zipeisong_shanghu_butielv:自配送商户补贴率},summary_radar_measures:[user_health_level,xin_yonghu_zhanbi,wuliu_zhunshi_lv,wuliu_avg_songda_time,wuliu_qishi_renxiao,shop_cover_lv_zhizi,danjun_yingli,zong_shichang_fene_zhanbi],summary_radar_measures_explaination:{danjun_yingli:（订单收入-百度补贴（含代金券））/完成订单数,shop_cover_lv_zhizi:百度商户数覆盖的POI点/总POI点（同智子口径）,user_health_level:用户生命周期中新用户、上升期、平稳期为健康用户群，流失用户、衰退期用户为非健康用户群,wuliu_avg_songda_time:订单已完成的时间节点-用户下单时间节点,wuliu_qishi_renxiao:完成订单数/出单骑士数量,wuliu_zhunshi_lv:（总完成订单数-早达订单数-晚达订单数）/总完成订单数,xin_yonghu_zhanbi:下单新用户数/下单用户数,zong_shichang_fene_zhanbi:百度外卖流水/三家总流水},topics_default_measures:{compete:[zong_shichang_fene_zhanbi],delivery:[wuliu_qishi_renxiao,wuliu_zhunshi_lv,wuliu_avg_songda_time],order:[liushui_youhuiqian,roi_kaohe,danjun_yingli],shop:[xinzeng_shenhe_pass_shanghu_num,shop_cover_lv_zhizi],user:[xin_yonghu_num,xin_yonghu_zhanbi,user_health_level]},topics_detail_drill_measure_names:{delivery:chudan_qishi_num,order:shop_zaixian_hezuo_num,user:shop_zaixian_hezuo_num}}},info:7830643d6b9b2e5f119e9fc81ccac4b1,params:{beginTime:20161114,cityId:131,endTime:20161114,timeType:day,topicName:order},status:1}</td>
+                            <td title=Fail>Fail</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=数据策略分析展示图表>数据策略分析展示图表</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_deep_chart>http://182.61.58.92/rudder/rest/topic/topic_deep_chart</td>
+                            <td title=post>post</td>
+                            <td title={'cityId': 131, 'endTime': '20161107', 'beginTime': '20161107', 'timeType': 'week', 'topicName': 'order'}>{'cityId': 131, 'endTime': '20161107', 'beginTime': '20161107', 'timeType': 'week', 'topicName': 'order'}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{proccessed_param:{accessCityIds:[-900000],b...success state taken a substring of output>{data:{proccessed_param:{accessCityIds:[-900000],b...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=概览页面>概览页面</td>
+                            <td title=http://182.61.58.92/rudder/rest/summary/index_kpi_snapshot>http://182.61.58.92/rudder/rest/summary/index_kpi_snapshot</td>
+                            <td title=post>post</td>
+                            <td title={'daykey': 20161114}>{'daykey': 20161114}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{result_data:{9540dabiao_days:[{accessible:f...success state taken a substring of output>{data:{result_data:{9540dabiao_days:[{accessible:f...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=地图和城市排名模块>地图和城市排名模块</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_map_and_rank>http://182.61.58.92/rudder/rest/topic/topic_map_and_rank</td>
+                            <td title=post>post</td>
+                            <td title={'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}>{'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{result_data:{city_datas:{},province_datas:{...success state taken a substring of output>{data:{result_data:{city_datas:{},province_datas:{...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=运营效率雷达图模块>运营效率雷达图模块</td>
+                            <td title=http://182.61.58.92/rudder/rest/summary/index_radar_snapshot>http://182.61.58.92/rudder/rest/summary/index_radar_snapshot</td>
+                            <td title=get>get</td>
+                            <td title={'cityId': 110, 'daykey': 20161114}>{'cityId': 110, 'daykey': 20161114}</td>
+                            <td title="status": 1|查询结果为空>"status": 1|查询结果为空</td>
+                            <td title=405>405</td>
+                            <td title=Error>Error</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=城市分天明细曲线图>城市分天明细曲线图</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_city_measure_lines>http://182.61.58.92/rudder/rest/topic/topic_city_measure_lines</td>
+                            <td title=post>post</td>
+                            <td title={'cityId': 131, 'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}>{'cityId': 131, 'endTime': 20161114, 'beginTime': 20161114, 'timeType': 'day', 'topicName': 'order'}</td>
+                            <td title="status": 12>"status": 12</td>
+                            <td title={data:{result_data:{city_datas:{}},result_enrich:{dimension_name_list:[deliveryId,deliveryName,shopId,shopName,cityId,cityName,aoiId,aoiName],dimension_name_map:{aoiId:商圈ID,aoiName:所属商圈,cityId:城市ID,cityName:所属城市,deliveryId:骑士ID,deliveryName:骑士姓名,shopId:商户ID,shopName:商户名称},kpi_measures:[shop_dongxiao_lv,xin_yonghu_num,xinzeng_shenhe_pass_shanghu_num,liushui_youhuiqian,roi_kaohe,baidu_shichang_fene_zhanbi,roi_kaohe_reciprocal,shop_butie_lv,wuliu_order_wancheng_num,zipeisong_shanghu_butielv,9540dabiao_days,xinzeng_shenhe_pass_shuangzheng_shanghu_num],measures_en2ch:{baidu_shichang_fene:百度月流水,baidu_shichang_fene_zhanbi:市场份额,baidu_shop_cover_lv:商户覆盖率,bailing_shichang_zhanyoulv:白领市场占有率,bd_butie_and_daijinquan:百度补贴(含代金券),caipin_huodong_shop_num:菜品活动商户数,caipin_huodong_shop_num_zhanbi:菜品活动商户数占比,chudan_qishi_num:出单骑士数,danjun_yingli:单均盈利,day_roi:ROI(渠道),day_roi_zongti:ROI(流水/百度补贴),day_roi_zongti_jing:ROI(流水/(补贴-折扣收入)),dianping_shop_num:大众点评商户数,dingdan_zhunshilv:物流单准时率,ele_shichang_fene:饿了么月流水,ele_shichang_fene_zhanbi:饿了么市占率,jishidan_pingjun_songda_shijian:物流单平均配送时长,jundanjia_youhuiqian:均单价(优惠前),liushui_youhuiqian:流水,liushui_youhuiqian_normal_all:全部订单流水(优惠前),lizhi_qishi_num:离职骑士数,manjian_huodong_shop_num:满减活动商户数,manjian_huodong_shop_num_zhanbi:满减活动商户数占比,meituan_shichang_fene:美团月流水,meituan_shichang_fene_zhanbi:美团市占率,order_num:订单数,order_shouru_liushui:订单收入,order_wancheng_lv:订单完成率,order_wancheng_num:完成订单数,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_daijinquan:商户补贴（含商户券）,shop_butie_lv:商户承担费率（考核用）,shop_butie_lv_daijinquan:商户补贴率（含商户券）,shop_chudan_shop_num:出单商户数,shop_cover_lv_zhizi:商户覆盖率,shop_dongxiao_lv:动销率,shop_xinzeng_shanghu_num:新增商户数,shop_zaixian_hezuo_num:在线合作商户数,shop_zhekou_shop_num:折扣商户数,user_health_level:用户健康度,wuliu_avg_songda_time:平均送达时间,wuliu_liushui_youhuiqian:物流单流水(优惠前),wuliu_order_wancheng_num:物流完成单量,wuliu_order_wanchenglv:物流单完成率,wuliu_peisong_order_num:物流单数,wuliu_qishi_renxiao:骑士人效,wuliu_shouru:物流收入,wuliu_xianshang_putie:物流单百度补贴,wuliu_zhunshi_lv:百度配送物流准时率,xiadan_user_num:下单用户数,xin_yonghu_num:新用户,xin_yonghu_zhanbi:新用户占比,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zaizhi_qishi_num:在职骑士数,zipeisong_shanghu_butielv:自配送商户补贴率,zong_shichang_fene_zhanbi:总市占率},measures_en2ch_kpi_measures:{baidu_shichang_fene_zhanbi:市场份额,liushui_youhuiqian:流水,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_lv:商户承担费率（考核用）,wuliu_order_wancheng_num:物流完成单量,xin_yonghu_num:新用户,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zipeisong_shanghu_butielv:自配送商户补贴率},summary_radar_measures:[user_health_level,xin_yonghu_zhanbi,wuliu_zhunshi_lv,wuliu_avg_songda_time,wuliu_qishi_renxiao,shop_cover_lv_zhizi,danjun_yingli,zong_shichang_fene_zhanbi],summary_radar_measures_explaination:{danjun_yingli:（订单收入-百度补贴（含代金券））/完成订单数,shop_cover_lv_zhizi:百度商户数覆盖的POI点/总POI点（同智子口径）,user_health_level:用户生命周期中新用户、上升期、平稳期为健康用户群，流失用户、衰退期用户为非健康用户群,wuliu_avg_songda_time:订单已完成的时间节点-用户下单时间节点,wuliu_qishi_renxiao:完成订单数/出单骑士数量,wuliu_zhunshi_lv:（总完成订单数-早达订单数-晚达订单数）/总完成订单数,xin_yonghu_zhanbi:下单新用户数/下单用户数,zong_shichang_fene_zhanbi:百度外卖流水/三家总流水},topics_default_measures:{compete:[zong_shichang_fene_zhanbi],delivery:[wuliu_qishi_renxiao,wuliu_zhunshi_lv,wuliu_avg_songda_time],order:[liushui_youhuiqian,roi_kaohe,danjun_yingli],shop:[xinzeng_shenhe_pass_shanghu_num,shop_cover_lv_zhizi],user:[xin_yonghu_num,xin_yonghu_zhanbi,user_health_level]},topics_detail_drill_measure_names:{delivery:chudan_qishi_num,order:shop_zaixian_hezuo_num,user:shop_zaixian_hezuo_num}}},info:1ae8bf0692fe0549f27787d91459e11e,params:{beginTime:20161114,cityId:131,endTime:20161114,timeType:day,topicName:order},status:1}>{data:{result_data:{city_datas:{}},result_enrich:{dimension_name_list:[deliveryId,deliveryName,shopId,shopName,cityId,cityName,aoiId,aoiName],dimension_name_map:{aoiId:商圈ID,aoiName:所属商圈,cityId:城市ID,cityName:所属城市,deliveryId:骑士ID,deliveryName:骑士姓名,shopId:商户ID,shopName:商户名称},kpi_measures:[shop_dongxiao_lv,xin_yonghu_num,xinzeng_shenhe_pass_shanghu_num,liushui_youhuiqian,roi_kaohe,baidu_shichang_fene_zhanbi,roi_kaohe_reciprocal,shop_butie_lv,wuliu_order_wancheng_num,zipeisong_shanghu_butielv,9540dabiao_days,xinzeng_shenhe_pass_shuangzheng_shanghu_num],measures_en2ch:{baidu_shichang_fene:百度月流水,baidu_shichang_fene_zhanbi:市场份额,baidu_shop_cover_lv:商户覆盖率,bailing_shichang_zhanyoulv:白领市场占有率,bd_butie_and_daijinquan:百度补贴(含代金券),caipin_huodong_shop_num:菜品活动商户数,caipin_huodong_shop_num_zhanbi:菜品活动商户数占比,chudan_qishi_num:出单骑士数,danjun_yingli:单均盈利,day_roi:ROI(渠道),day_roi_zongti:ROI(流水/百度补贴),day_roi_zongti_jing:ROI(流水/(补贴-折扣收入)),dianping_shop_num:大众点评商户数,dingdan_zhunshilv:物流单准时率,ele_shichang_fene:饿了么月流水,ele_shichang_fene_zhanbi:饿了么市占率,jishidan_pingjun_songda_shijian:物流单平均配送时长,jundanjia_youhuiqian:均单价(优惠前),liushui_youhuiqian:流水,liushui_youhuiqian_normal_all:全部订单流水(优惠前),lizhi_qishi_num:离职骑士数,manjian_huodong_shop_num:满减活动商户数,manjian_huodong_shop_num_zhanbi:满减活动商户数占比,meituan_shichang_fene:美团月流水,meituan_shichang_fene_zhanbi:美团市占率,order_num:订单数,order_shouru_liushui:订单收入,order_wancheng_lv:订单完成率,order_wancheng_num:完成订单数,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_daijinquan:商户补贴（含商户券）,shop_butie_lv:商户承担费率（考核用）,shop_butie_lv_daijinquan:商户补贴率（含商户券）,shop_chudan_shop_num:出单商户数,shop_cover_lv_zhizi:商户覆盖率,shop_dongxiao_lv:动销率,shop_xinzeng_shanghu_num:新增商户数,shop_zaixian_hezuo_num:在线合作商户数,shop_zhekou_shop_num:折扣商户数,user_health_level:用户健康度,wuliu_avg_songda_time:平均送达时间,wuliu_liushui_youhuiqian:物流单流水(优惠前),wuliu_order_wancheng_num:物流完成单量,wuliu_order_wanchenglv:物流单完成率,wuliu_peisong_order_num:物流单数,wuliu_qishi_renxiao:骑士人效,wuliu_shouru:物流收入,wuliu_xianshang_putie:物流单百度补贴,wuliu_zhunshi_lv:百度配送物流准时率,xiadan_user_num:下单用户数,xin_yonghu_num:新用户,xin_yonghu_zhanbi:新用户占比,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zaizhi_qishi_num:在职骑士数,zipeisong_shanghu_butielv:自配送商户补贴率,zong_shichang_fene_zhanbi:总市占率},measures_en2ch_kpi_measures:{baidu_shichang_fene_zhanbi:市场份额,liushui_youhuiqian:流水,roi_kaohe:老用户ROI（考核用）,roi_kaohe_reciprocal:老用户百度补贴率,shop_butie_lv:商户承担费率（考核用）,wuliu_order_wancheng_num:物流完成单量,xin_yonghu_num:新用户,xinzeng_shenhe_pass_shanghu_num:新增审核通过商户数,zipeisong_shanghu_butielv:自配送商户补贴率},summary_radar_measures:[user_health_level,xin_yonghu_zhanbi,wuliu_zhunshi_lv,wuliu_avg_songda_time,wuliu_qishi_renxiao,shop_cover_lv_zhizi,danjun_yingli,zong_shichang_fene_zhanbi],summary_radar_measures_explaination:{danjun_yingli:（订单收入-百度补贴（含代金券））/完成订单数,shop_cover_lv_zhizi:百度商户数覆盖的POI点/总POI点（同智子口径）,user_health_level:用户生命周期中新用户、上升期、平稳期为健康用户群，流失用户、衰退期用户为非健康用户群,wuliu_avg_songda_time:订单已完成的时间节点-用户下单时间节点,wuliu_qishi_renxiao:完成订单数/出单骑士数量,wuliu_zhunshi_lv:（总完成订单数-早达订单数-晚达订单数）/总完成订单数,xin_yonghu_zhanbi:下单新用户数/下单用户数,zong_shichang_fene_zhanbi:百度外卖流水/三家总流水},topics_default_measures:{compete:[zong_shichang_fene_zhanbi],delivery:[wuliu_qishi_renxiao,wuliu_zhunshi_lv,wuliu_avg_songda_time],order:[liushui_youhuiqian,roi_kaohe,danjun_yingli],shop:[xinzeng_shenhe_pass_shanghu_num,shop_cover_lv_zhizi],user:[xin_yonghu_num,xin_yonghu_zhanbi,user_health_level]},topics_detail_drill_measure_names:{delivery:chudan_qishi_num,order:shop_zaixian_hezuo_num,user:shop_zaixian_hezuo_num}}},info:1ae8bf0692fe0549f27787d91459e11e,params:{beginTime:20161114,cityId:131,endTime:20161114,timeType:day,topicName:order},status:1}</td>
+                            <td title=Fail>Fail</td>
+                        </tr>
+                        
+                        <tr>
+                            <td title=数据策略分析展示图表>数据策略分析展示图表</td>
+                            <td title=http://182.61.58.92/rudder/rest/topic/topic_deep_chart>http://182.61.58.92/rudder/rest/topic/topic_deep_chart</td>
+                            <td title=post>post</td>
+                            <td title={'cityId': 131, 'endTime': '20161107', 'beginTime': '20161107', 'timeType': 'week', 'topicName': 'order'}>{'cityId': 131, 'endTime': '20161107', 'beginTime': '20161107', 'timeType': 'week', 'topicName': 'order'}</td>
+                            <td title="status": 1>"status": 1</td>
+                            <td title={data:{proccessed_param:{accessCityIds:[-900000],b...success state taken a substring of output>{data:{proccessed_param:{accessCityIds:[-900000],b...success state taken a substring of output</td>
+                            <td title=Success>Success</td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>  <!-- detail-->
+        <div class="row" id="result"></div>
+    </div>      <!-- container -->
+    <script src="D:\mycode\work_code\virtual_pyenv\code\static/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="D:\mycode\work_code\virtual_pyenv\code\static/bootstrap.min.js" type="text/javascript"></script>
+    <script src="D:\mycode\work_code\virtual_pyenv\code\static/echarts.common.min.js" type="text/javascript"></script>
+    <script src="D:\mycode\work_code\virtual_pyenv\code\static/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="D:\mycode\work_code\virtual_pyenv\code\static/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="D:\mycode\work_code\virtual_pyenv\code\static/mypage.js" type="text/javascript"></script>
+
+</body>
+
+</html>

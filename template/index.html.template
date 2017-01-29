@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TestReport</title>
+    <meta charset="UTF-8"></meta>
+    <link href="{{static}}/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="{{static}}/mypage.css" type="text/css" rel="stylesheet" />
+    <link href="{{static}}/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+    <link href="{{static}}/dataTables.bootstrap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div name="container">
+        <div id="summarynum" style="display:none"></div>
+        <div class="row" id="summary" style="margin:15px;">
+            <div class="col-lg-7">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">测试概要</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <table class="table table-bordered table-condensed table-hover">
+                            <tbody>
+                            <tr>
+                                <td>开始时间</td>
+                                <td>{{starttime}}</td>
+                            </tr>
+                            <tr>
+                                <td>结束时间</td>
+                                <td>{{endtime}}</td>
+                            </tr>
+                            <tr>
+                                <td>case总数</td>
+                                <td>{{total}}</td>
+                            </tr>
+                            <tr>
+                                <td>成功数</td>
+                                <td id="success">{{success}}</td>
+                            </tr>
+                            <tr>
+                                <td>失败数</td>
+                                <td id="fail">{{fail}}</td>
+                            </tr>
+                            <tr>
+                                <td>错误数</td>
+                                <td id="error">{{error}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-lg-5">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">概要图</h3>
+                    </div>
+                    <div id="summarypic" style="height:236px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="detail" style="margin:15px;">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">测试详情 (tips:单击任意单元格可在最下方显示完整内容)</h3>
+                </div>
+                <table id="detailtable" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>接口名称</th>
+                            <th>接口地址</th>
+                            <th>接口类型</th>
+                            <th>接口入参</th>
+                            <th>预期出参</th>
+                            <th>实际出参</th>
+                            <th>测试结果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in detail %}
+                        <tr>
+                            <td title={{data.interface_name}}>{{data.interface_name}}</td>
+                            <td title={{data.url}}>{{data.url}}</td>
+                            <td title={{data.reqtype}}>{{data.reqtype}}</td>
+                            <td title={{data.data}}>{{data.data}}</td>
+                            <td title={{data.expection}}>{{data.expection}}</td>
+                            <td title={{data.actual}}>{{data.actual}}</td>
+                            <td title={{data.status}}>{{data.status}}</td>
+                        </tr>
+                        {%endfor%}
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>  <!-- detail-->
+        <div class="row" id="result"></div>
+    </div>      <!-- container -->
+    <script src="{{static}}/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="{{static}}/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{{static}}/echarts.common.min.js" type="text/javascript"></script>
+    <script src="{{static}}/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="{{static}}/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="{{static}}/mypage.js" type="text/javascript"></script>
+
+</body>
+
+</html>
